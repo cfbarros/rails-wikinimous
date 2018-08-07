@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="article-description margin-top-medium">
+        <div class="title">
+          <h1> <%= @article.title %> </h1>
+          <div class="article-button">
+            <i class="fas fa-edit"><%= link_to "Update", edit_article_path(@article) %></i>
+            <i class="fas fa-trash"><%= link_to "Delete", article_path,
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></i>
+          </div>
+        </div>
+        <p><%= @article.content %></p>
+      </div>
+    </div>
+  </div>
+</div>
